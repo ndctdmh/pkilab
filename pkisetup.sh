@@ -8,6 +8,10 @@ echo "This script will setup the PKI lab configuration."
 echo "Press ENTER to continue or ctrl-C to exit"
 read input
 #
+echo "Copy pkihelp file to Desktop"
+cp pkihelp /home/seed/Desktop/
+echo " "
+#
 echo "Step 1 - Setting up SSL config files"
 echo "   Copying openssl.conf"
 cp /usr/lib/ssl/openssl.cnf  ./
@@ -47,13 +51,13 @@ echo "   Change dir /etc/apache2/sites-available"
 cd /etc/apache2/sites-available
 echo "   Adding config lines to seed-ssl.conf" 
 {
-echo "<VirtualHost *:80>"
+echo "<VirtualHost *:443>"
 echo "ServerName sra221.com"
 echo "DocumentRoot /var/www/sra221"
 echo "DirectoryIndex index.html"
-echo "#SSLEngine On"
-echo "#SSLCertificateFile /home/seed/server.crt"
-echo "#SSLCertificateKeyFile /home/seed/server.key"
+echo "SSLEngine On"
+echo "SSLCertificateFile /home/seed/server.crt"
+echo "SSLCertificateKeyFile /home/seed/server.key"
 echo "</VirtualHost>"
 } >/etc/apache2/sites-available/seed-ssl.conf
 #
