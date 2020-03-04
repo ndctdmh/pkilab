@@ -15,7 +15,7 @@ echo " "
 #
 echo "Step 1 - Setting up SSL config files"
 echo "   Copying openssl.conf"
-cp /usr/lib/ssl/openssl.cnf  ./
+cp /usr/lib/ssl/openssl.cnf  /home/seed/
 echo "   Making demoCA dir"
 mkdir demoCA
 cd demoCA
