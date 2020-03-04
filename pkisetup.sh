@@ -8,7 +8,7 @@ echo "This script will setup the PKI lab configuration."
 echo "Press ENTER to continue or ctrl-C to exit"
 read input
 #
-echo "Copy pkihelp file to Desktop"
+echo "Coping the Lab doc to Desktop"
 cp *.docx /home/seed/Desktop/
 echo " "
 #
