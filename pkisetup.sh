@@ -8,6 +8,7 @@ echo "This script will setup the PKI lab configuration."
 echo "Press ENTER to continue or ctrl-C to exit"
 read input
 #
+chmod 775 /home/seed/pkilab
 echo "Coping the Lab doc to Desktop"
 cp *.docx /home/seed/Desktop/
 echo " "
@@ -66,7 +67,6 @@ echo "Step 5 - Change /etc/hosts to resolve 127.0.0.1 to SRA221.com "
 echo "   Host file Updated"
 #
 echo "   Changing dir to home"
-cd ..
+cd /home/seed
 echo " "
 echo "Setup for PKI Complete at" `date`
-exit
