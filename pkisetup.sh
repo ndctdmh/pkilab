@@ -65,7 +65,8 @@ echo "Step 5 - Change /etc/hosts to resolve 127.0.0.1 to SRA221.com "
  echo "127.0.0.1 sra221.com" >>/etc/hosts
 echo "   Host file Updated"
 #
+echo "   Changing dir to home"
+cd ..
 echo " "
 echo "Setup for PKI Complete at" `date`
-cd /home/seed
 exit
