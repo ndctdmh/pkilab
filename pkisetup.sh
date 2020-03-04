@@ -9,7 +9,7 @@ echo "Press ENTER to continue or ctrl-C to exit"
 read input
 #
 echo "Copy pkihelp file to Desktop"
-cp pkihelp /home/seed/Desktop/
+cp *.docx /home/seed/Desktop/
 echo " "
 #
 echo "Step 1 - Setting up SSL config files"
@@ -67,4 +67,5 @@ echo "   Host file Updated"
 #
 echo " "
 echo "Setup for PKI Complete at" `date`
+cd /home/seed
 exit
