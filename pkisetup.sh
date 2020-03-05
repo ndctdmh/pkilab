@@ -25,6 +25,8 @@ echo "   Touching index.txt and serial files"
 touch index.txt serial
 echo "   Setting serial input to 1000"
 echo 1000 > serial
+chown seed /home/seed/demoCA
+chown seed /home/seed/demoCA/*
 echo "   Changing dir to home"
 cd /home/seed
 echo "Step 1 - Complete"
