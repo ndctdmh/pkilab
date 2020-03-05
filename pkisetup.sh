@@ -26,7 +26,7 @@ touch index.txt serial
 echo "   Setting serial input to 1000"
 echo 1000 > serial
 echo "   Changing dir to home"
-cd ..
+cd /home/seed
 echo "Step 1 - Complete"
 #
 echo " "
