@@ -18,7 +18,7 @@ echo "   Copying openssl.conf"
 cp /usr/lib/ssl/openssl.cnf  /home/seed/
 echo "   Making demoCA dir"
 mkdir /home/seed/demoCA
-cd demoCA
+cd /home/seed/demoCA
 echo "   Creating new cert dirs under demoCA"
 mkdir certs crl newcerts 
 echo "   Touching index.txt and serial files"
