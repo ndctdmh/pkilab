@@ -26,8 +26,8 @@ echo "   Touching index.txt and serial files"
 touch index.txt serial
 echo "   Setting serial input to 1000"
 echo 1000 > serial
-chown seed $WORKDIR/demoCA
-chown seed $WORKDIR/demoCA/*
+chown plabadmin $WORKDIR/demoCA
+chown plabadmin $WORKDIR/demoCA/*
 echo "   Changing dir to home"
 cd $WORKDIR
 echo "Step 1 - Complete"
