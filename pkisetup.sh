@@ -11,7 +11,7 @@ read input
 WORKDIR=/home/plabadmin
 chmod 775 $WORKDIR/pkilab
 echo "Coping the Lab doc to Desktop"
-cp *.pdf $WORKDIR/Desktop/
+cp *.txt $WORKDIR/Desktop/
 echo " "
 #
 echo "Step 1 - Setting up SSL config files"
