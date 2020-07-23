@@ -5,35 +5,36 @@
 # ==============================================
 #
 echo "This script will setup the PKI lab configuration."
+echo "Please run this as the plabadmin user"
 echo "Press ENTER to continue or ctrl-C to exit"
 read input
 #
-chmod 775 /home/seed/pkilab
+chmod 775 ~/pkilab
 echo "Coping the Lab doc to Desktop"
-cp *.docx /home/seed/Desktop/
+cp *.docx ~/Desktop/
 echo " "
 #
 echo "Step 1 - Setting up SSL config files"
 echo "   Copying openssl.conf"
-cp /usr/lib/ssl/openssl.cnf  /home/seed/
+cp /usr/lib/ssl/openssl.cnf  ~
 echo "   Making demoCA dir"
-mkdir /home/seed/demoCA
-cd /home/seed/demoCA
+mkdir ~/demoCA
+cd ~/demoCA
 echo "   Creating new cert dirs under demoCA"
 mkdir certs crl newcerts 
 echo "   Touching index.txt and serial files"
 touch index.txt serial
 echo "   Setting serial input to 1000"
 echo 1000 > serial
-chown seed /home/seed/demoCA
-chown seed /home/seed/demoCA/*
+chown seed ~/demoCA
+chown seed ~/demoCA/*
 echo "   Changing dir to home"
-cd /home/seed
+cd ~
 echo "Step 1 - Complete"
 #
 echo " "
 echo "Step 2 - Modify openssl.cnf to policy_anything"
-sed -i 's/policy_match/policy_anything/g' /home/seed/openssl.cnf
+sed -i 's/policy_match/policy_anything/g' ~/openssl.cnf
 echo "   openssl.cnf updated"
 #
 echo "Step 3 - Setting Up SRA 221 Hello Webpage"
@@ -59,8 +60,8 @@ echo "ServerName sra221.com"
 echo "DocumentRoot /var/www/sra221"
 echo "DirectoryIndex index.html"
 echo "SSLEngine On"
-echo "SSLCertificateFile /home/seed/server.crt"
-echo "SSLCertificateKeyFile /home/seed/server.key"
+echo "SSLCertificateFile ~/server.crt"
+echo "SSLCertificateKeyFile ~/server.key"
 echo "</VirtualHost>"
 } >/etc/apache2/sites-available/seed-ssl.conf
 #
@@ -69,6 +70,6 @@ echo "Step 5 - Change /etc/hosts to resolve 127.0.0.1 to SRA221.com "
 echo "   Host file Updated"
 #
 echo "   Changing dir to home"
-cd /home/seed
+cd ~
 echo " "
 echo "Setup for PKI Complete at" `date`
