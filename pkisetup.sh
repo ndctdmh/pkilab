@@ -9,6 +9,8 @@ echo "Please run this as the plabadmin user"
 echo "Press ENTER to continue or ctrl-C to exit"
 read input
 #
+echo $HOME
+echo ~
 chmod 775 ~/pkilab
 echo "Coping the Lab doc to Desktop"
 cp *.docx ~/Desktop/
