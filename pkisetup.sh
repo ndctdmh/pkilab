@@ -53,7 +53,7 @@ echo "   Page created in index.html"
 echo "Step 4 - Create Apache ssl config"
 echo "   Change dir /etc/apache2/sites-available"
 cd /etc/apache2/sites-available
-echo "   Adding config lines to seed-ssl.conf" 
+echo "   Adding config lines to plabadmin-ssl.conf" 
 {
 echo "<VirtualHost *:443>"
 echo "ServerName sra221.com"
@@ -63,7 +63,7 @@ echo "SSLEngine On"
 echo "SSLCertificateFile $WORKDIR/server.crt"
 echo "SSLCertificateKeyFile $WORKDIR/server.key"
 echo "</VirtualHost>"
-} >/etc/apache2/sites-available/seed-ssl.conf
+} >/etc/apache2/sites-available/plabadmin-ssl.conf
 #
 echo "Step 5 - Change /etc/hosts to resolve 127.0.0.1 to SRA221.com "
  echo "127.0.0.1 sra221.com" >>/etc/hosts
